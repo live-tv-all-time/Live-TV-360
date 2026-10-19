@@ -367,6 +367,47 @@ footer{
 .live-count{color:#fff}
 .live-label{color:#aaa}
 
+.channel-groups {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+    margin-bottom: 18px;
+}
+
+.group-btn {
+    background: #171717;
+    color: #fff;
+    border: 1px solid #333;
+    border-radius: 20px;
+    padding: 10px 17px;
+    font-size: 14px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: .2s;
+}
+
+.group-btn:hover {
+    background: #292929;
+    border-color: #777;
+}
+
+.group-btn.active {
+    background: #e50914;
+    border-color: #e50914;
+    color: #fff;
+}
+
+@media (max-width: 600px) {
+    .channel-groups {
+        gap: 7px;
+    }
+
+    .group-btn {
+        padding: 9px 12px;
+        font-size: 12px;
+    }
+}
+
 </style>
 </head>
 
@@ -438,14 +479,27 @@ footer{
         📡 Live TV Channels
     </div>
 
-    <input
-        id="search"
-        class="search-box"
-        type="text"
-        placeholder="🔎 Search channel..."
-    >
+    
+<input
+    id="search"
+    class="search-box"
+    type="text"
+    placeholder="🔎 Search channel..."
+>
 
-    <div id="channels" class="channels-grid"></div>
+<div id="channelGroups" class="channel-groups">
+    <button class="group-btn active" data-category="All">All Channels</button>
+    <button class="group-btn" data-category="Bangla">Bangla</button>
+    <button class="group-btn" data-category="Hindi">Hindi</button>
+    <button class="group-btn" data-category="Sports">Sports</button>
+    <button class="group-btn" data-category="Music">Music</button>
+    <button class="group-btn" data-category="Movies">Movies</button>
+    <button class="group-btn" data-category="Nature">Nature</button>
+    <button class="group-btn" data-category="Other">Other</button>
+</div>
+
+<div id="channels" class="channels-grid"></div>
+
     <!-- MOVIES -->
 
     <div class="movie-section">
@@ -958,40 +1012,75 @@ function showChannels(list){
 
 }
 
+/* CHANNEL GROUPING — original channel URLs unchanged */
 
-showChannels(channels);
+const groupButtons = document.getElementById("channelGroups");
+let selectedCategory = "All";
 
+function getCategory(channel) {
+    const name = channel.name.trim().toUpperCase();
 
-/* =====================================================
-   CHANNEL SEARCH
-===================================================== */
-
-searchInput.addEventListener(
-    "input",
-    function(){
-
-        const value =
-            this.value
-            .toLowerCase()
-            .trim();
-
-
-        const filtered =
-            channels.filter(
-                function(channel){
-
-                    return channel.name
-                        .toLowerCase()
-                        .includes(value);
-
-                }
-            );
-
-
-        showChannels(filtered);
-
+    // Sports
+    if (/SPORT|WILLOW|A SPORTS/.test(name)) {
+        return "Sports";
     }
-);
+
+    // Music
+    if (/MUSIC|9X TASHAN/.test(name)) {
+        return "Music";
+    }
+
+    // Nature
+    if (/NATURE/.test(name)) {
+        return "Nature";
+    }
+
+    // Bangla channels
+    if (/ATN NEWS|JAMUNA TV|NEWS 24|NTV HD|STAR JOLSHA|ZEE BANGLA|DEEPTO TV|PEACE TV BANGLA|ENTER10 BANGLA|SANANDA TV|BHUJPURI CINEMA/.test(name)) {
+        return "Bangla";
+    }
+
+    // Hindi / Indian entertainment and movies
+    if (/STAR MAA|MAHA MAX|GOLDMINES|HORROR CINEMA|MOVIES|BIZ CINEMA|THE MOVIES CLUB|CLASSIC MOVIES|FREE MOVIES/.test(name)) {
+        return "Hindi";
+    }
+
+    return "Other";
+}
+
+function renderChannels() {
+    const query = searchInput.value.toLowerCase().trim();
+
+    const filtered = channels.filter(function(channel) {
+        const matchesSearch = channel.name.toLowerCase().includes(query);
+        const matchesCategory =
+            selectedCategory === "All" ||
+            getCategory(channel) === selectedCategory;
+
+        return matchesSearch && matchesCategory;
+    });
+
+    showChannels(filtered);
+}
+
+groupButtons.addEventListener("click", function(event) {
+    const button = event.target.closest(".group-btn");
+    if (!button) return;
+
+    selectedCategory = button.dataset.category;
+
+    groupButtons.querySelectorAll(".group-btn").forEach(function(btn) {
+        btn.classList.toggle("active", btn === button);
+    });
+
+    renderChannels();
+});
+
+searchInput.addEventListener("input", renderChannels);
+
+// Display all channels on startup
+renderChannels();
+
 
 
 
