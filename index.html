@@ -677,23 +677,23 @@ const channels = [
         url: "https://live-bangla.akamaized.net/liveabr/pub-iobanglakp3sff/live_240p/chunks.m3u8"
     },
     {
-        name: "SPORTS",
-        logo: "https://i.ibb.co.com/dsFHfhRf/Screenshot-2026-09-24-163535.png",
+        name: "BEIN SPORTS XTRA",
+        logo: "https://i.ibb.co.com/RGnRyntM/Screenshot-2026-10-20-003200.png",
         url: "https://bein-xtra-xumo.amagi.tv/hls/amagi_hls_data_beinAAAAA-bein-xtra-xumoA/CDN/master.m3u8"
     },
     {
-        name: "SPORTS-1",
-        logo: "https://i.ibb.co.com/dsFHfhRf/Screenshot-2026-09-24-163535.png",
+        name: "FIFA +",
+        logo: "https://i.ibb.co.com/NgTt0BbQ/Screenshot-2026-10-20-004116.png",
         url: "https://5d95f7d7.wurl.com/master/f36d25e7e52f1ba8d7e56eb859c636563214f541/UmFrdXRlblRWLWl0X0ZJRkFQbHVzSXRhbGlhbl9ITFM/playlist.m3u8"
     },
     {
-        name: "SPORT-2 HD",
-        logo: "https://i.ibb.co.com/dsFHfhRf/Screenshot-2026-09-24-163535.png",
+        name: "FIFA SPORTS",
+        logo: "https://i.ibb.co.com/MxVBkhrX/Screenshot-2026-10-20-004423.png",
         url: "https://d2w9q46ikgrcwx.cloudfront.net/v1/master/3722c60a815c199d9c0ef36c5b73da68a62b09d1/cc-of5cbk3sav3w5/v1/sysdata_s_p_a_fifa_7/samsungheadend_us/latest/main/hls/playlist.m3u8"
     },
     {
-        name: "SPORT-3 HD",
-        logo: "https://i.ibb.co.com/dsFHfhRf/Screenshot-2026-09-24-163535.png",
+        name: "INTER MILAN TV",
+        logo: "https://i.ibb.co.com/kVmRvG6k/Screenshot-2026-10-20-004819.png",
         url: "https://d3k8wzt41aflvx.cloudfront.net/INTERTV/Live.m3u8"
     },
     {
@@ -727,8 +727,8 @@ const channels = [
         url: "https://ogc-nsprt-tcl-roku-syndication.otteravision.com/ogc/nsprt/nsprt.m3u8"
     },
     {
-        name: "WILLOW SPORTS HD",
-        logo: "https://i.ibb.co.com/6JXTx8qs/Screenshot-2026-09-30-212907.png",
+        name: "AMAZONNAWS HD",
+        logo: "https://i.ibb.co.com/wZYq1NgY/Screenshot-2026-10-20-005529.png",
         url: "https://d03ae6b5c6724c24867e97a3dc04934a.mediatailor.us-west-2.amazonaws.com/v1/master/ba62fe743df0fe93366eba3a257d792884136c7f/LINEAR-1026-WORBBRPTFAST-WHALETVPLUS/1026/hls/master/playlist.m3u8"
     },
     {
@@ -737,8 +737,8 @@ const channels = [
         url: "https://warm-caverns-48629-92fab798385f.herokuapp.com/https://d36r8jifhgsk5j.cloudfront.net/Willow_TV540p.m3u8"
     },
     {
-        name: "NATURE SPORTS HD",
-        logo: "https://i.ibb.co.com/twcmJFQW/Screenshot-2026-09-30-214909.png",
+        name: "NAUTICAL SPORTS",
+        logo: "https://i.ibb.co.com/rGQcYQH5/Screenshot-2026-10-20-005911.png",
         url: "https://a-cdn.klowdtv.com/live2/nautical_720p/playlist.m3u8"
     },
     {
@@ -1021,7 +1021,7 @@ function getCategory(channel) {
     const name = channel.name.trim().toUpperCase();
 
     // Sports
-    if (/SPORT|WILLOW|A SPORTS/.test(name)) {
+    if (/BEIN SPORTS XTRA|WILLOW|FIFA +|FIFA SPORTS|INTER MILAN TV|STAR SPORTS-2 HD|AMAZONNAWS HD|NAUTICAL SPORTS|A SPORTS/.test(name)) {
         return "Sports";
     }
 
