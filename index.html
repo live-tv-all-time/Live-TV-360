@@ -1021,7 +1021,7 @@ function getCategory(channel) {
     const name = channel.name.trim().toUpperCase();
 
     // Sports
-    if (/BEIN SPORTS XTRA|WILLOW|FIFA +|FIFA SPORTS|INTER MILAN TV|STAR SPORTS-2 HD|AMAZONNAWS HD|NAUTICAL SPORTS|A SPORTS/.test(name)) {
+    if (/BEIN SPORTS XTRA|WILLOW|FIFA +|FIFA SPORTS|INTER MILAN TV|STAR SPORTS-2 HD|AMAZONNAWS HD|NAUTICAL SPORTS|PK SPORTS HD|A SPORTS/.test(name)) {
         return "Sports";
     }
 
@@ -1036,12 +1036,12 @@ function getCategory(channel) {
     }
 
     // Bangla channels
-    if (/ATN NEWS|JAMUNA TV|NEWS 24|NTV HD|STAR JOLSHA|ZEE BANGLA|DEEPTO TV|PEACE TV BANGLA|ENTER10 BANGLA|SANANDA TV/.test(name)) {
+    if (/ATN NEWS|JAMUNA TV|NEWS 24|NTV HD|STAR JOLSHA|ZEE BANGLA|DEEPTO TV|PEACE TV BANGLA|ENTER10 BANGLA|SRK TV HD|SANANDA TV/.test(name)) {
         return "Bangla";
     }
 
     // Hindi / Indian entertainment and movies
-    if (/STAR MAA|MAHA MAX|GOLDMINES|HORROR CINEMA|MOVIES|BIZ CINEMA|THE MOVIES CLUB|CLASSIC MOVIES|FREE MOVIES/.test(name)) {
+    if (/STAR MAA|MAHA MAX|GOLDMINES|HORROR CINEMA|MOVIES|BIZ CINEMA|THE MOVIES CLUB|CLASSIC MOVIES|BHUJPURI CINEMA|FREE MOVIES/.test(name)) {
         return "Hindi";
     }
 
