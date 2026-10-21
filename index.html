@@ -574,30 +574,6 @@ footer{
 <!-- EXISTING AD SCRIPT -->
 
 
-
-
-
-<script>
-/* =====================================================
-   LIVE VIEWER
-   NOTE: A true cross-user realtime count requires a
-   realtime service (Firebase/Supabase/etc.). This safe
-   fallback keeps the counter visible without changing
-   the existing TV/movie functionality.
-===================================================== */
-(function(){
-    const countEl = document.getElementById("liveViewerCount");
-    const pluralEl = document.getElementById("liveViewerPlural");
-    if(!countEl) return;
-
-    // Temporary local fallback: current browser session = 1 viewer.
-    // Replace only this small block with a realtime provider when credentials exist.
-    let count = 1;
-    countEl.textContent = count;
-    if(pluralEl) pluralEl.style.display = count === 1 ? "none" : "inline";
-})();
-</script>
-
 <script>
 
 /* =====================================================
