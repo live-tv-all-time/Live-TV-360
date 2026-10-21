@@ -482,6 +482,7 @@ footer{
 <div id="channelGroups" class="channel-groups">
     <button class="group-btn active" data-category="All">All Channels</button>
     <button class="group-btn" data-category="Bangla">Bangla</button>
+    <button class="group-btn" data-category="BanglaEntertainment">Bangla Entertainment</button>
     <button class="group-btn" data-category="Hindi">Hindi</button>
     <button class="group-btn" data-category="Sports">Sports</button>
     <button class="group-btn" data-category="Music">Music</button>
@@ -1183,7 +1184,10 @@ function getCategory(channel) {
     if (/BTV CTG HD|ATN BANGLA HD|ATN NEWS HD|CHANNEL I HD|CHANNEL 1 HD|EKUSHEY TV HD|NTV HD|RTV HD|BOISHAKHI TV HD|BANGLA VISHION HD|DESH TV HD|MY TV HD|MOHONA TV HD|BIJOY TV HD|SOMOY TV HD|MAASRANGA TV HD|GAZI TV HD|EKATTOR TV HD|ASIAN TV HD|SA TV HD|GREEN TV HD|JAMUNA TV HD|DEEPTO TV HD|DBC NEWS HD|NEWS 24 HD|BANGLA TV HD|DURONTO TV HD|ANANDA TV HD|NEXUS TV HD|EKHON TV HD|GLOBAL TV HD|CHANNEL S HD|SRK TV HD|MATRIBHUMI TV HD|RAJDHANI TV HD|NAN TV HD|DESHI TV HD|ME TV HD|THIKANA HD|ENTER TV HD|SANANDA TV HD|PEACE TV BANGLA HD/.test(name)) {
         return "Bangla";
     }
-
+    // BanglaEntertainment / BanglaEntertainment
+    if (/STAR JOLSHA HD|ZEE BANGLA HD|ENTER10 BANGLA/.test(name)) {
+        return "Bangla Entertainment";
+    }
     // Hindi / Indian entertainment and movies
     if (/STAR MAA|MAHA MAX|GOLDMINES|HORROR CINEMA|MOVIES|BIZ CINEMA|THE MOVIES CLUB|CLASSIC MOVIES|BHUJPURI CINEMA|FREE MOVIES/.test(name)) {
         return "Hindi";
