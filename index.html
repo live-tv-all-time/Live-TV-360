@@ -987,8 +987,8 @@ const channels = [
         url: "https://lotus.stingray.com/manifest/naturescape-a003-montreal/samsungtvplus/master.m3u8"
     },
     {
-        name: "MUSIC",
-        logo: "https://i.ibb.co.com/wFv8Crqg/Screenshot-2026-09-24-164225.png",
+        name: "ZOOM",
+        logo: "https://i.ibb.co.com/G3kgyCvz/Screenshot-2026-10-22-154754.png",
         url: "https://dai.google.com/linear/hls/event/JCAm25qkRXiKcK1AJMlvKQ/master.m3u8"
     },
     {
@@ -996,20 +996,35 @@ const channels = [
         logo: "https://i.ibb.co.com/hx23x4Ng/Screenshot-2026-10-22-144645.png",
         url: "https://channels.trace.plus/Traceprod/URBAN_FR_hd/index.m3u8"
     },
-    {
-        name: "A MUSIC TV",
-        logo: "https://i.ibb.co.com/jkbVp9Tm/Screenshot-2026-10-20-091306.png",
-        url: "https://albportal.net/albkanalemusic.m3u8"
+     {
+        name: "TRACE VANILLA",
+        logo: "https://i.ibb.co.com/84LGTrYW/Screenshot-2026-10-22-152943.png",
+        url: "https://channels.trace.plus/Traceprod/VANILLA_hd/index.m3u8"
     },
     {
-        name: "MUSIC-HINDI",
-        logo: "https://i.ibb.co.com/wFv8Crqg/Screenshot-2026-09-24-164225.png",
+        name: "BALLE BALLE",
+        logo: "https://i.ibb.co.com/Xr599772/Screenshot-2026-10-22-145203.png",
+        url: "https://mcncdndigital.com/balleballetv/index.m3u8"
+    },
+     {
+        name: "BIZ MUSIC",
+        logo: "https://i.ibb.co.com/spPv7btn/Screenshot-2026-10-22-154155.png",
+        url: "https://fl.biztv.media/music_720_QAKpGmVUjaPApCNjpsgBxrdqNihAkl/index.m3u8"
+    },
+    {
+        name: "TABBAR HITS",
+        logo: "https://i.ibb.co.com/N6YC46yF/Screenshot-2026-10-22-154427.png",
         url: "https://vglivessai.akamaized.net/sg/v1/master/611d79b11b77e2f571934fd80ca1413453772ac7/e11b0319-52e8-4190-ab03-3931cc68eac9/index.m3u8"
     },
     {
         name: "9X TASHAN",
         logo: "https://xstreamcp-assets-msp.streamready.in/assets/LIVETV/LIVECHANNEL/LIVETV_LIVETVCHANNEL_9X_TASHAN/images/LOGO_HD/image.png",
         url: "https://wiselp.wiseplayout.com/9X_Tashan/master.m3u8"
+    },
+     {
+        name: "BOOM TV",
+        logo: "https://i.ibb.co.com/MDXCwx9N/Screenshot-2026-10-22-152624.png",
+        url: "https://tvboom.ro/live-tv/live.m3u8"
     },
     {
         name: "HORROR CINEMA",
@@ -1276,7 +1291,7 @@ function getCategory(channel) {
     }
 
     // Music
-    if (/MUSIC|TRACE URBAN|A MUSIC TV|9X TASHAN/.test(name)) {
+    if (/ZOOM|TRACE URBAN|TRACE VANILLA|BALLE BALLE|BIZ MUSIC|9X TASHAN|TABBAR HITS|BOOM TV/.test(name)) {
         return "Music";
     }
 
