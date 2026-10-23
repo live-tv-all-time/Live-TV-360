@@ -1018,6 +1018,11 @@ const channels = [
         url: "https://lotus.stingray.com/manifest/naturescape-a003-montreal/samsungtvplus/master.m3u8"
     },
     {
+        name: "SONY BBC EARTH HD",
+        logo: "https://i.ibb.co.com/FLNJGP7n/Screenshot-2026-10-23-152746.png",
+        url: "https://drk6xq0vhn.gpcdn.net/live/bbc_earth_hd_abr/live/sony_bbc_earth_hd_720/chunks.m3u8"
+    },
+    {
         name: "ZOOM",
         logo: "https://i.ibb.co.com/G3kgyCvz/Screenshot-2026-10-22-154754.png",
         url: "https://dai.google.com/linear/hls/event/JCAm25qkRXiKcK1AJMlvKQ/master.m3u8"
@@ -1337,7 +1342,7 @@ function getCategory(channel) {
     }
 
     // Nature
-    if (/NATURE/.test(name)) {
+    if (/NATURE|SONY BBC EARTH HD/.test(name)) {
         return "Nature";
     }
 
