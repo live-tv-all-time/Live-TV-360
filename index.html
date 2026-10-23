@@ -484,6 +484,7 @@ footer{
     <button class="group-btn" data-category="Bangla">Bangla</button>
     <button class="group-btn" data-category="Bangla Entertainment">Bangla Entertainment</button>
     <button class="group-btn" data-category="Hindi">Hindi</button>
+    <button class="group-btn" data-category="Hindi Entertainment">Hindi Entertainment</button>
     <button class="group-btn" data-category="Sports">Sports</button>
     <button class="group-btn" data-category="Music">Music</button>
     <button class="group-btn" data-category="Movies">Movies</button>
@@ -843,47 +844,47 @@ const channels = [
     },
     {
         name: "STAR PLUS",
-        logo: "https://i.ibb.co.com/WNRy4P8y/iptv.png",
+        logo: "https://i.ibb.co.com/xKp4KB80/Screenshot-2026-10-23-115759.png",
         url: "https://d1rc86nwwc9fag.cloudfront.net/260723/starplusuk_2500/chunklist.m3u8"
     },
     {
         name: "COLORS",
-        logo: "https://i.ibb.co.com/WNRy4P8y/iptv.png",
+        logo: "https://i.ibb.co.com/4gDqP2wt/Screenshot-2026-10-23-120029.png",
         url: "https://da86m1sqpm3o0.cloudfront.net/28072023/smil:colorsaudev.smil/chunklist_b1928000.m3u8"
     },
     {
         name: "COLORS RISHTEY",
-        logo: "https://i.ibb.co.com/WNRy4P8y/iptv.png",
+        logo: "https://i.ibb.co.com/Q3Xy0rVn/Screenshot-2026-10-23-120151.png",
         url: "https://manatv.akamaized.net/090823/smil:ristheyamerica.smil/chunklist_b1928000.m3u8"
     },
     {
         name: "STAR BHARAT",
-        logo: "https://i.ibb.co.com/WNRy4P8y/iptv.png",
+        logo: "https://i.ibb.co.com/jZsKGPyg/Screenshot-2026-10-23-120727.png",
         url: "https://d1taaads3ztvmu.cloudfront.net/120723/smil:lifeokuk.smil/chunklist_b2628000.m3u8"
     },
     {
         name: "SHEMAROO ENT",
-        logo: "https://i.ibb.co.com/WNRy4P8y/iptv.png",
+        logo: "https://i.ibb.co.com/Q3nvVS7J/Screenshot-2026-10-23-121049.png",
         url: "https://airtelapp.shemaroo.com/shemarootv/smil:shemarootvadp.smil/chunklist_b1628000_sleng.m3u8"
     },
     {
         name: "MANORANJAN TV",
-        logo: "https://i.ibb.co.com/WNRy4P8y/iptv.png",
+        logo: "https://i.ibb.co.com/Cp7vsTnn/Screenshot-2026-10-23-121706.png",
         url: "https://streams.tangotv.in/MANORANJANTV/ORIGIN/tracks-v1a1/mono.m3u8"
     },
     {
         name: "MANORANJAN GRAND",
-        logo: "https://i.ibb.co.com/WNRy4P8y/iptv.png",
+        logo: "https://i.ibb.co.com/dwtksVZ8/Screenshot-2026-10-23-121827.png",
         url: "https://streams.tangotv.in/MANORANJANGRAND/ORIGIN/tracks-v1a1/mono.m3u8"
     },
     {
         name: "DANGAL",
-        logo: "https://i.ibb.co.com/WNRy4P8y/iptv.png",
+        logo: "https://i.ibb.co.com/39pHKn8p/Screenshot-2026-10-23-122016.png",
         url: "https://live-dangal.akamaized.net/liveabr/pub-iodang10p4al/live_720p/chunks.m3u8"
     },
     {
         name: "DANGAL 2",
-        logo: "https://i.ibb.co.com/WNRy4P8y/iptv.png",
+        logo: "https://i.ibb.co.com/6cstSxwt/Screenshot-2026-10-23-122246.png",
         url: "https://live-dangal2.akamaized.net/liveabr/pub-iodanga2a26kj2/live_720p/chunks.m3u8"
     },
     {
@@ -1327,6 +1328,10 @@ function getCategory(channel) {
     // Bangla Entertainment / BanglaEntertainment
     if (/STAR JOLSHA HD|ZEE BANGLA HD|ENTER10 BANGLA|SONY AATH|AKASH BANGLA|RUPOSHI BANGLA|RONGEEN|DD BANGLA/.test(name)) {
         return "Bangla Entertainment";
+    }
+    // Hindi Entertainment / HindiEntertainment
+    if (/STAR PLUS|COLORS|COLORS RISHTEY|STAR BHARAT|SHEMAROO ENT|MANORANJAN TV|MANORANJAN GRAND|DANGAL|DANGAL 2/.test(name)) {
+        return "Hindi Entertainment";
     }
     // Hindi / Indian entertainment and movies
     if (/STAR MAA|MAHA MAX|GOLDMINES|HORROR CINEMA|MOVIES|BIZ CINEMA|THE MOVIES CLUB|CLASSIC MOVIES|BHUJPURI CINEMA|FREE MOVIES/.test(name)) {
