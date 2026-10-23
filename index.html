@@ -950,7 +950,7 @@ const channels = [
     {
         name: "STAR SPORTS-1 HD",
         logo: "https://i.ibb.co.com/d4CZYkRX/Screenshot-2026-09-30-213358.png",
-        url: "https://d3qs3d2rkhfqrt.cloudfront.net/out/v1/b17adfe543354fdd8d189b110617cddd/index_7.m3u8"
+        url: "https://starsportshindiii.pages.dev/720p.m3u8"
     },
      {
         name: "STAR SPORTS-2 HD",
@@ -978,8 +978,8 @@ const channels = [
         url: "https://ogc-nsprt-tcl-roku-syndication.otteravision.com/ogc/nsprt/nsprt.m3u8"
     },
     {
-        name: "AMAZONNAWS HD",
-        logo: "https://i.ibb.co.com/wZYq1NgY/Screenshot-2026-10-20-005529.png",
+        name: "RED BULL",
+        logo: "https://i.ibb.co.com/8n3ZJJTj/Screenshot-2026-10-23-131216.png",
         url: "https://d03ae6b5c6724c24867e97a3dc04934a.mediatailor.us-west-2.amazonaws.com/v1/master/ba62fe743df0fe93366eba3a257d792884136c7f/LINEAR-1026-WORBBRPTFAST-WHALETVPLUS/1026/hls/master/playlist.m3u8"
     },
     {
@@ -1312,7 +1312,7 @@ function getCategory(channel) {
     const name = channel.name.trim().toUpperCase();
 
     // Sports
-    if (/BEIN SPORTS XTRA|WILLOW|FIFA +|FIFA SPORTS|INTER MILAN TV|STAR SPORTS-2 HD|AMAZONNAWS HD|NAUTICAL SPORTS|PK SPORTS HD|A SPORTS/.test(name)) {
+    if (/BEIN SPORTS XTRA|STAR SPORTS-1 HD|SONY SPORTS 2|WILLOW|FIFA +|FIFA SPORTS|INTER MILAN TV|STAR SPORTS-2 HD|RED BULL|NAUTICAL SPORTS|PK SPORTS HD|A SPORTS/.test(name)) {
         return "Sports";
     }
 
