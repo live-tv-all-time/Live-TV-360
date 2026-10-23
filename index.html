@@ -1032,6 +1032,16 @@ const channels = [
         logo: "https://i.ibb.co.com/Xr599772/Screenshot-2026-10-22-145203.png",
         url: "https://mcncdndigital.com/balleballetv/index.m3u8"
     },
+    {
+        name: "PTC MUSIC",
+        logo: "https://i.ibb.co.com/G3kgyCvz/Screenshot-2026-10-22-154754.png",
+        url: "https://d2lk5u59tns74c.cloudfront.net/out/v1/f913cf893c594f73b114216e74a2efbc/index_4.m3u8"
+    },
+    {
+        name: "B4U MUSIC",
+        logo: "https://i.ibb.co.com/G3kgyCvz/Screenshot-2026-10-22-154754.png",
+        url: "https://streams.tangotv.in/B4UMUSIC/ORIGIN/tracks-v1a1/mono.m3u8"
+    },
      {
         name: "BIZ MUSIC",
         logo: "https://i.ibb.co.com/spPv7btn/Screenshot-2026-10-22-154155.png",
@@ -1317,7 +1327,7 @@ function getCategory(channel) {
     }
 
     // Music
-    if (/ZOOM|TRACE URBAN|TRACE VANILLA|BALLE BALLE|BIZ MUSIC|9X TASHAN|TABBAR HITS|BOOM TV/.test(name)) {
+    if (/ZOOM|TRACE URBAN|TRACE VANILLA|BALLE BALLE|PTC MUSIC|B4U MUSIC|BIZ MUSIC|9X TASHAN|TABBAR HITS|BOOM TV/.test(name)) {
         return "Music";
     }
 
